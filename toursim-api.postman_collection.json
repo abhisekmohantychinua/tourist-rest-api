@@ -1,0 +1,303 @@
+{
+	"info": {
+		"_postman_id": "5bbb6d82-2c02-496c-b104-e6ad93f83809",
+		"name": "toursim-api",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "23395461"
+	},
+	"item": [
+		{
+			"name": "Get - all the place",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/places/",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"places",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get - single place by placeId",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/places/{placeId}",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"places",
+						"{placeId}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get - All the list of products of Place by placeId",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/products/list/{placeId}",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"products",
+						"list",
+						"{placeId}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get - all tourist place of a Place by placeId",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/tourist/{placeId}",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"tourist",
+						"{placeId}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get - All reviews of Place by placeId",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/reviews/list/{placeId}",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"reviews",
+						"list",
+						"{placeId}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Post - a Place",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"placeId\": \" id \",\r\n    \"name\": \" place name \",\r\n    \"capital\": \" capital of the place \",\r\n    \"about\": \" about the place \",\r\n    \"climate\": \" about the climate of the place \",\r\n    \"history\": \" history of the place \",\r\n    \"time\": \" description about time \",\r\n    \"food\": \" description of food \",\r\n    \"img\": [\r\n        \"URL 1\",\r\n        \"URL 2\",\r\n        \"URL 3\"\r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/places/",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"places",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Post - single Product to Place by placeId",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \" name of the product \",\r\n    \"description\": \" product description \",\r\n    \"image\": \" url of product image \",\r\n    \"category\": \" product category\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/products/single/{placeId}",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"products",
+						"single",
+						"{placeId}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Post - List of Product to Place by placeId",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "[\r\n    {\r\n                \"name\": \" name of the product \",\r\n                \"description\": \" product description \",\r\n                \"image\": \" url of product image \",\r\n                \"category\": \" product category\"\r\n    },\r\n    {\r\n                \"name\": \" name of the product \",\r\n                \"description\": \" product description \",\r\n                \"image\": \" url of product image \",\r\n                \"category\": \" product category\"\r\n    }\r\n            \r\n]",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/products/list/{placeId}",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"products",
+						"list",
+						"{placeId}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Post - single tourist to Place by placeId",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \" name of tourist place \",\r\n    \"info\": \" Enter description \",\r\n    \"images\": \" image url \",\r\n    \"location\": \" Enter location url \"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/tourist/single/{placeId}",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"tourist",
+						"single",
+						"{placeId}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Post - List of Product to Place by placeId",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "[\r\n    {\r\n        \"name\": \" name of tourist place \",\r\n        \"info\": \" Enter description \",\r\n        \"images\": \" image url \",\r\n        \"location\": \" Enter location url \"\r\n    },\r\n    {\r\n        \"name\": \" name of tourist place \",\r\n        \"info\": \" Enter description \",\r\n        \"images\": \" image url \",\r\n        \"location\": \" Enter location url \"\r\n    }\r\n]",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/tourist/list/{placeId}",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"tourist",
+						"list",
+						"{placeId}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Post - add Review to a Place by placeId",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"body\":\" your review \"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/reviews/{placeId}",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"reviews",
+						"{placeId}"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
