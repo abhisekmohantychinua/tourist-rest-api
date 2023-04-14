@@ -64,7 +64,7 @@ public class TouristServices {
             touristList.forEach(tourist -> {
                 this.mongoTemplate.update(Place.class)
                         .matching(Criteria.where("placeId").is(placeId))
-                        .apply(new Update().push("reviewIds").value(tourist.getId()))
+                        .apply(new Update().push("touristIds").value(tourist.getId()))
                         .first();
 
             });
